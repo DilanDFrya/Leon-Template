@@ -1,6 +1,8 @@
 /* start variables */
 :root{
     --main-color: #10cab7;
+    --h2-color:#2c4755;
+    --p-color:#333;
 }
 
 /* end variables */
@@ -39,6 +41,33 @@ body{
     .container{
         width: 1170px;
     }
+}
+
+.special-heading{
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    color: #ebeceb;
+    letter-spacing: -3px;
+    margin: 0px;
+}
+
+.special-heading + p{
+    text-align: center;
+    color: #333;
+    margin: -30px 0px 0px ;
+    font-size: 20px;
+}
+
+@media (max-width: 767px){
+    .special-heading{
+        font-size: 70px;
+    }
+    
+    .special-heading + p{
+        margin-top: -20px  ;
+    }
+
 }
 
 /* end global rules */
@@ -123,7 +152,7 @@ body{
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: #333;
+    color: var(--p-color);
     transition: 0.3s;
 }
 
@@ -139,13 +168,13 @@ body{
 /* end header */
 /* start landing section */
 .landing{
-    background-color: #f6f6f6;
-    width: 100%;
-    height: 554px;
-    position: relative;
+    background-image: url(../img/black_and_1534817744-1024x475.jpeg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative; */
 }
 
-.landing-text-styll{
+.landing .container{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -166,6 +195,150 @@ body{
 
 .landing p{
     font-size: 19px;
+    color: var(--p-color);
     line-height: 1.8;
 }
 /* end landing section */
+
+/* Start Features */
+.features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0px 20px;
+}
+
+.features .container .features-contint{
+    padding: 20px;
+    text-align: center;
+}
+
+.features .container .features-contint i{
+    color: var(--main-color);
+}
+
+.features .container .features-contint h3{
+    font-family: 800;
+    color: var(--h2-color);
+    margin: 30px 0px;
+}
+.features .container .features-contint p{
+    color: #777;
+    line-height: 1.8;
+    font-size: 17px;
+}
+/* End Features */
+/* Start Services */
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0px 30px;
+    margin-top: 100px;
+}
+
+.services .services-content .srv{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px){
+    .services .services-content .srv{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .srv i{
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.services .services-content .srv .text{
+    flex:1;
+}
+
+.services .services-content .srv .text h3{
+    margin: 0 0 20px;
+}
+
+.services .services-content .srv .text p{
+    color: var(--p-color);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.services img{
+    width: 260px;
+}
+
+.services .services-content .img{
+    position: relative;
+    text-align: center;
+}
+
+.services .services-content .img::before{
+    content: "";
+    background-color: var(--h2-color);
+    width: 80px;
+    height:calc(100% + 100px);
+    right: 0px;
+    top: -50px;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 1199px){
+    .img-colom{
+        display: none;
+    }
+}
+/* End Services */
+/* Start Portfolio */
+.protfolio{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.protfolio .container .protfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.protfolio .col{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.protfolio .container .protfolio-content .col img{
+    width: 100%;
+}
+
+.protfolio .container .protfolio-content .col .text{
+    padding: 20px 20px;
+}
+
+.protfolio .container .protfolio-content .col .text h3{
+    margin: 0;
+}
+
+.protfolio .container .protfolio-content .col .text p{
+    color: var(--p-color);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* End Portfolio */
