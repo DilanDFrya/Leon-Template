@@ -9,6 +9,10 @@
 
 /* stat global rules */
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
 }
