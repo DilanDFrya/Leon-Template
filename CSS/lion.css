@@ -363,7 +363,7 @@ body{
 @media (max-width: 767px){
     .about .container .about-content{
         grid-template-columns:repeat(1, minmax(300px, 1fr));
-        grid-template-rows:repeat(2, minmax(300px, 1fr));
+        grid-template-rows:repeat(auto-fill, minmax(300px, 1fr));
         grid-template-areas: "img" "text" "text";
         text-align: center;
     }
